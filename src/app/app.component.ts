@@ -41,6 +41,7 @@ export class AppComponent {
   timeout2;
   start() {
 
+    this.reset();
     this.state1 = 'started';
 
     this.timeout2 = setTimeout(() => {
