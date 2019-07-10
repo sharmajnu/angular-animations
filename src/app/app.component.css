@@ -1,0 +1,12 @@
+
+.line {
+  height: 0px;
+  position: absolute;
+  top: 0%;
+  background: #78cbec;
+  width: 5px;
+}
+.transparent {
+  background: #eee;
+  height: calc(100% - 48px)
+}

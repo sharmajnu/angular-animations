@@ -1,0 +1,20 @@
+<div class="ai-item flex flex-row mt-2">
+	<div class="flex flex-col">
+		<div class="z-50 mt-1 w-10 h-10 bg-blue-700 text-center align-middle text-white rounded-full p-2 flex-grow-0" style="margin-left: 6px">{{itemNumber}}
+		</div>
+		<!-- <div class="ml-6 mt-12 line transparent">
+		</div> -->
+		<div class="flex flex-grow relative mt-1" style="margin-bottom: 30px">
+			<div [class.state-nc]="state === 'nearlyCompleted' || state === 'completed'" class="ml-6 line" #loadingBar>
+			</div>
+		</div>
+	</div>
+	<div class="ml-4 mt-2 text-xl flex flex-col">
+		<span>Current state: <b>{{state}}</b></span>
+
+            <label class="block text-xs" for="duration">Duration(Milliseconds)</label>
+            <input id="duration" type="number" class="border-b border-blue-600" [(ngModel)]="duration" (ngModelChange)="durationChanged.emit($event)" />
+            <div *ngIf="state === 'nearlyCompleted'" class="text-xs pt-16 mt-6" >1 min remaining</div>
+
+        </div>
+</div>

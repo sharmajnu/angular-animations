@@ -1,0 +1,24 @@
+<div class="p-2">
+	<span class="p-2">Agenda</span>
+
+<div class="ml-6 mt-12 line transparent" style="margin-left: 25px"></div>
+
+<app-agenda-item [duration]="duration1" (durationChanged)="duration1 = $event" itemNumber="1" [state]="state1" ></app-agenda-item>
+<app-agenda-item [duration]="duration2"  itemNumber="2"  [state]="state2" isLastItem="true"></app-agenda-item>
+
+
+    <div class="text-center">
+
+        <button class="border p-2 mt-2 bg-blue-light white" (click)="start()">Start</button>
+
+        <!-- <button class="border ml-2 p-2 mt-2 bg-blue-light white" (click)="setState('nearlyCompleted')">Nearly
+            completed</button>
+
+        <button class="border ml-2 p-2 mt-2 bg-blue-light white" (click)="setState('started', duration / 2)">Set 50%
+            done</button> -->
+        <button class="border ml-2 p-2 mt-2 bg-blue-light white" (click)="reset()">Reset</button>
+    </div>
+</div>
+<div class="border-l-4 border-blue-600 mx-20 mt-20 p-2 opacity-75">
+    Last one minutes animation is done in last 5 seconds(for simulation purpose). <br/> You can change the duration to see how it behaves with different durations.
+</div>

@@ -1,0 +1,26 @@
+.ai-item {
+  height: 200px;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid silver;
+}
+
+.line {
+  height: 0px;
+  position: absolute;
+  top: 0%;
+  background: #78cbec;
+  width: 5px;
+}
+.transparent {
+  background: #eee;
+  height: calc(100% - 48px)
+}
+
+input {
+  outline-width: 0px;
+}
+.state-nc {
+
+  background: #ff4136;
+}
