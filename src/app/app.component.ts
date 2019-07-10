@@ -7,7 +7,7 @@ import { AnimationBuilder, AnimationPlayer } from "@angular/animations";
 import {
   trigger,
   state,
-  style,/
+  style,
   animate,
   transition,
   group,

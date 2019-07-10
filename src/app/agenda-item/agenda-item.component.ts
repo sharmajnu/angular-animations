@@ -27,7 +27,7 @@ export class AgendaItemComponent {
 
   public player: AnimationPlayer;
 
-  @ViewChild('loadingBar')
+  @ViewChild('loadingBar', {static: true})
   public loadingBar;
 
   @Input()
