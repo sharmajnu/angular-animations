@@ -161,6 +161,7 @@ export class AgendaItemComponent {
 
       const factory = this._builder.build([
         group([
+          animate('1s', style({background: '#ff6600'})),
           animate('5s', style({ top: `calc(100% + ${this.fullLineHeightPx})` })),
           animate('5s', style({ height: '0px' }))
         ])
