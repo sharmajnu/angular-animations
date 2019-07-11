@@ -2,9 +2,7 @@
 	<div class="flex flex-col">
 		<div class="z-50 mt-1 w-10 h-10 bg-blue-700 text-center align-middle text-white rounded-full p-2 flex-grow-0" style="margin-left: 6px">{{itemNumber}}
 		</div>
-		<!-- <div class="ml-6 mt-12 line transparent">
-		</div> -->
-		<div class="flex flex-grow relative mt-1" style="margin-bottom: 30px">
+		<div class="flex flex-grow relative mt-1" [style.margin-bottom]="fullLineHeightPx">
 			<div [class.state-nc]="state === 'nearlyCompleted' || state === 'completed'" class="ml-6 line" #loadingBar>
 			</div>
 		</div>

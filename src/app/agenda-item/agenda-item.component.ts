@@ -55,10 +55,21 @@ export class AgendaItemComponent {
     private _builder: AnimationBuilder) {
   }
 
+  initialLineHeight = 5;
 
-  handler: number;
+  get initialLineHeightPx() {
+    return this.initialLineHeight + 'px';
+  }
+
+  fullLineHeight = 20;
+  get fullLineHeightPx() {
+    return this.fullLineHeight + 'px';
+  }
+
+  handler: any;
 
   warningTime = 5000;
+
   setState(value) {
     this._state = value;
 
@@ -99,18 +110,18 @@ export class AgendaItemComponent {
 
     remainingTime = remainingTime - this.warningTime;
 
-    this.clearnCurrentAnimations();
+    this.clearCurrentAnimations();
 
     const topPercent = 100 - Math.round((remainingTime) * 100 / (this.duration - this.warningTime));
 
     const top = `${topPercent}%`;
     this.loadingBar.nativeElement.style.top = top;
 
-    this.loadingBar.nativeElement.style.height = '0px';
+    this.loadingBar.nativeElement.style.height = this.initialLineHeightPx;
 
     const pHeight = this.loadingBar.nativeElement.parentElement.scrollHeight;
 
-    const slidingPercent = (30 * 100 / pHeight);
+    const slidingPercent = ((this.fullLineHeight - this.initialLineHeight) * 100 / pHeight);
     const expandTime = (slidingPercent * remainingTime) / 100;
 
     const slidingTime = remainingTime - expandTime;
@@ -125,7 +136,7 @@ export class AgendaItemComponent {
 
     const factory = this._builder.build([
       sequence([
-        animate(expandTime, style({ height: '30px' })),
+        animate(expandTime, style({ height: this.fullLineHeightPx })),
         animate(slidingTime, style({ top: '100%' }))
       ])
     ]);
@@ -140,17 +151,17 @@ export class AgendaItemComponent {
 
   runNearlyCompletedAnimation() {
 
-    this.clearnCurrentAnimations();
+    this.clearCurrentAnimations();
 
     this.loadingBar.nativeElement.style.top = '100%';
-    this.loadingBar.nativeElement.style.height = '30px';
+    this.loadingBar.nativeElement.style.height = this.fullLineHeightPx;
 
 
     if (!this.isLastItem) {
 
       const factory = this._builder.build([
         group([
-          animate('5s', style({ top: 'calc(100% + 30px)' })),
+          animate('5s', style({ top: `calc(100% + ${this.fullLineHeightPx})` })),
           animate('5s', style({ height: '0px' }))
         ])
       ]);
@@ -168,7 +179,7 @@ export class AgendaItemComponent {
 
   }
 
-  clearnCurrentAnimations() {
+  clearCurrentAnimations() {
     if (this.player) {
       this.player.destroy();
       this.player = undefined;
