@@ -6381,7 +6381,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".ai-item {\r\n  height: 200px;\r\n  background: white;\r\n  border-radius: 5px;\r\n  border: 1px solid silver;\r\n}\r\n\r\n.line {\r\n  height: 0px;\r\n  position: absolute;\r\n  top: 0%;\r\n  background: #78cbec;\r\n  width: 5px;\r\n}\r\n\r\n.transparent {\r\n  background: #eee;\r\n  height: calc(100% - 48px)\r\n}\r\n\r\ninput {\r\n  outline-width: 0px;\r\n}\r\n\r\n.state-nc {\r\n\r\n  background: #ff4136;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWdlbmRhLWl0ZW0vYWdlbmRhLWl0ZW0uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGFBQWE7RUFDYixpQkFBaUI7RUFDakIsa0JBQWtCO0VBQ2xCLHdCQUF3QjtBQUMxQjs7QUFFQTtFQUNFLFdBQVc7RUFDWCxrQkFBa0I7RUFDbEIsT0FBTztFQUNQLG1CQUFtQjtFQUNuQixVQUFVO0FBQ1o7O0FBQ0E7RUFDRSxnQkFBZ0I7RUFDaEI7QUFDRjs7QUFFQTtFQUNFLGtCQUFrQjtBQUNwQjs7QUFDQTs7RUFFRSxtQkFBbUI7QUFDckIiLCJmaWxlIjoic3JjL2FwcC9hZ2VuZGEtaXRlbS9hZ2VuZGEtaXRlbS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmFpLWl0ZW0ge1xyXG4gIGhlaWdodDogMjAwcHg7XHJcbiAgYmFja2dyb3VuZDogd2hpdGU7XHJcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xyXG4gIGJvcmRlcjogMXB4IHNvbGlkIHNpbHZlcjtcclxufVxyXG5cclxuLmxpbmUge1xyXG4gIGhlaWdodDogMHB4O1xyXG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICB0b3A6IDAlO1xyXG4gIGJhY2tncm91bmQ6ICM3OGNiZWM7XHJcbiAgd2lkdGg6IDVweDtcclxufVxyXG4udHJhbnNwYXJlbnQge1xyXG4gIGJhY2tncm91bmQ6ICNlZWU7XHJcbiAgaGVpZ2h0OiBjYWxjKDEwMCUgLSA0OHB4KVxyXG59XHJcblxyXG5pbnB1dCB7XHJcbiAgb3V0bGluZS13aWR0aDogMHB4O1xyXG59XHJcbi5zdGF0ZS1uYyB7XHJcblxyXG4gIGJhY2tncm91bmQ6ICNmZjQxMzY7XHJcbn1cclxuIl19 */"
+module.exports = ".ai-item {\r\n  height: 200px;\r\n  background: white;\r\n  border-radius: 5px;\r\n  border: 1px solid silver;\r\n}\r\n\r\n.line {\r\n  height: 0px;\r\n  position: absolute;\r\n  top: 0%;\r\n  background: #78cbec;\r\n  width: 5px;\r\n}\r\n\r\n.transparent {\r\n  background: #eee;\r\n  height: calc(100% - 48px)\r\n}\r\n\r\ninput {\r\n  outline-width: 0px;\r\n}\r\n\r\n.state-nc {\r\n  background: #ff6600;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWdlbmRhLWl0ZW0vYWdlbmRhLWl0ZW0uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGFBQWE7RUFDYixpQkFBaUI7RUFDakIsa0JBQWtCO0VBQ2xCLHdCQUF3QjtBQUMxQjs7QUFFQTtFQUNFLFdBQVc7RUFDWCxrQkFBa0I7RUFDbEIsT0FBTztFQUNQLG1CQUFtQjtFQUNuQixVQUFVO0FBQ1o7O0FBQ0E7RUFDRSxnQkFBZ0I7RUFDaEI7QUFDRjs7QUFFQTtFQUNFLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLG1CQUFtQjtBQUNyQiIsImZpbGUiOiJzcmMvYXBwL2FnZW5kYS1pdGVtL2FnZW5kYS1pdGVtLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYWktaXRlbSB7XHJcbiAgaGVpZ2h0OiAyMDBweDtcclxuICBiYWNrZ3JvdW5kOiB3aGl0ZTtcclxuICBib3JkZXItcmFkaXVzOiA1cHg7XHJcbiAgYm9yZGVyOiAxcHggc29saWQgc2lsdmVyO1xyXG59XHJcblxyXG4ubGluZSB7XHJcbiAgaGVpZ2h0OiAwcHg7XHJcbiAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gIHRvcDogMCU7XHJcbiAgYmFja2dyb3VuZDogIzc4Y2JlYztcclxuICB3aWR0aDogNXB4O1xyXG59XHJcbi50cmFuc3BhcmVudCB7XHJcbiAgYmFja2dyb3VuZDogI2VlZTtcclxuICBoZWlnaHQ6IGNhbGMoMTAwJSAtIDQ4cHgpXHJcbn1cclxuXHJcbmlucHV0IHtcclxuICBvdXRsaW5lLXdpZHRoOiAwcHg7XHJcbn1cclxuXHJcbi5zdGF0ZS1uYyB7XHJcbiAgYmFja2dyb3VuZDogI2ZmNjYwMDtcclxufVxyXG4iXX0= */"
 
 /***/ }),
 
@@ -6392,7 +6392,7 @@ module.exports = ".ai-item {\r\n  height: 200px;\r\n  background: white;\r\n  bo
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"ai-item flex flex-row mt-2\">\r\n\t<div class=\"flex flex-col\">\r\n\t\t<div class=\"z-50 mt-1 w-10 h-10 bg-blue-700 text-center align-middle text-white rounded-full p-2 flex-grow-0\" style=\"margin-left: 6px\">{{itemNumber}}\r\n\t\t</div>\r\n\t\t<!-- <div class=\"ml-6 mt-12 line transparent\">\r\n\t\t</div> -->\r\n\t\t<div class=\"flex flex-grow relative mt-1\" style=\"margin-bottom: 30px\">\r\n\t\t\t<div [class.state-nc]=\"state === 'nearlyCompleted' || state === 'completed'\" class=\"ml-6 line\" #loadingBar>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"ml-4 mt-2 text-xl flex flex-col\">\r\n\t\t<span>Current state: <b>{{state}}</b></span>\r\n\r\n            <label class=\"block text-xs\" for=\"duration\">Duration in Milliseconds (Editable)</label>\r\n            <input id=\"duration\" type=\"number\"\r\n\t\t\tclass=\"border-b border-blue-200 focus:border-blue-700 text-base focus:text-xl\" \r\n\t\t\t[(ngModel)]=\"duration\" (ngModelChange)=\"durationChanged.emit($event)\" />\r\n            <div *ngIf=\"state === 'nearlyCompleted'\" class=\"text-xs pt-16 mt-6\" >1 min remaining (indication)</div>\r\n\r\n        </div>\r\n</div>"
+module.exports = "<div class=\"ai-item flex flex-row mt-2\">\r\n\t<div class=\"flex flex-col\">\r\n\t\t<div class=\"z-50 mt-1 w-10 h-10 bg-blue-700 text-center align-middle text-white rounded-full p-2 flex-grow-0\" style=\"margin-left: 6px\">{{itemNumber}}\r\n\t\t</div>\r\n\t\t<div class=\"flex flex-grow relative mt-1\" [style.margin-bottom]=\"fullLineHeightPx\">\r\n\t\t\t<div class=\"ml-6 line\" #loadingBar>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"ml-4 mt-2 text-xl flex flex-col\">\r\n\t\t<span>Current state: <b>{{state}}</b></span>\r\n\r\n\t\t<label class=\"block text-xs\" for=\"duration\">Duration in Milliseconds (Editable)</label>\r\n\t\t<div>\r\n\t\t\t<input id=\"duration\" type=\"number\"\r\n\t\t\t\tclass=\"border-b border-blue-200 focus:border-blue-700 text-base focus:text-xl\" [(ngModel)]=\"duration\"\r\n\t\t\t\t(ngModelChange)=\"durationChanged.emit($event)\" />\r\n\t\t\t<span *ngIf=\"duration && duration > 60000\" class=\"text-xs\">{{duration / 60000}} mins</span>\r\n\r\n\t\t</div>\r\n\t\t<div *ngIf=\"state === 'nearlyCompleted'\" class=\"text-xs pt-16 mt-6\">1 min remaining (indication)</div>\r\n\r\n\t</div>\r\n</div>"
 
 /***/ }),
 
@@ -6406,8 +6406,8 @@ module.exports = "<div class=\"ai-item flex flex-row mt-2\">\r\n\t<div class=\"f
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AgendaItemComponent", function() { return AgendaItemComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/animations */ "./node_modules/@angular/animations/fesm5/animations.js");
+/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/animations */ "./node_modules/@angular/animations/fesm5/animations.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6419,14 +6419,14 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
-
-
 var AgendaItemComponent = /** @class */ (function () {
     function AgendaItemComponent(ngZone, _builder) {
         this.ngZone = ngZone;
         this._builder = _builder;
         this._state = 'not-started';
-        this.durationChanged = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.durationChanged = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.initialLineHeight = 5;
+        this.fullLineHeight = 20;
         this.warningTime = 5000;
     }
     Object.defineProperty(AgendaItemComponent.prototype, "state", {
@@ -6439,6 +6439,20 @@ var AgendaItemComponent = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
+    Object.defineProperty(AgendaItemComponent.prototype, "initialLineHeightPx", {
+        get: function () {
+            return this.initialLineHeight + 'px';
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(AgendaItemComponent.prototype, "fullLineHeightPx", {
+        get: function () {
+            return this.fullLineHeight + 'px';
+        },
+        enumerable: true,
+        configurable: true
+    });
     AgendaItemComponent.prototype.setState = function (value) {
         var _this = this;
         this._state = value;
@@ -6446,6 +6460,7 @@ var AgendaItemComponent = /** @class */ (function () {
         if (value === 'not-started') {
             this.loadingBar.nativeElement.style.height = '0px';
             this.loadingBar.nativeElement.style.top = '0%';
+            this.clearCurrentAnimations();
         }
         if (value === 'started') {
             var remainingTime = this.duration;
@@ -6464,13 +6479,13 @@ var AgendaItemComponent = /** @class */ (function () {
             remainingTime = this.duration;
         }
         remainingTime = remainingTime - this.warningTime;
-        this.clearnCurrentAnimations();
+        this.clearCurrentAnimations();
         var topPercent = 100 - Math.round((remainingTime) * 100 / (this.duration - this.warningTime));
         var top = topPercent + "%";
         this.loadingBar.nativeElement.style.top = top;
-        this.loadingBar.nativeElement.style.height = '0px';
+        this.loadingBar.nativeElement.style.height = this.initialLineHeightPx;
         var pHeight = this.loadingBar.nativeElement.parentElement.scrollHeight;
-        var slidingPercent = (30 * 100 / pHeight);
+        var slidingPercent = ((this.fullLineHeight - this.initialLineHeight) * 100 / pHeight);
         var expandTime = (slidingPercent * remainingTime) / 100;
         var slidingTime = remainingTime - expandTime;
         var timer = {
@@ -6480,9 +6495,9 @@ var AgendaItemComponent = /** @class */ (function () {
         };
         console.log(timer);
         var factory = this._builder.build([
-            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["sequence"])([
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["animate"])(expandTime, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ height: '30px' })),
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["animate"])(slidingTime, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ top: '100%' }))
+            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["sequence"])([
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["animate"])(expandTime, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ height: this.fullLineHeightPx })),
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["animate"])(slidingTime, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ top: '100%' }))
             ])
         ]);
         this.player = factory.create(this.loadingBar.nativeElement, {});
@@ -6492,67 +6507,61 @@ var AgendaItemComponent = /** @class */ (function () {
     };
     AgendaItemComponent.prototype.runNearlyCompletedAnimation = function () {
         var _this = this;
-        this.clearnCurrentAnimations();
+        this.clearCurrentAnimations();
         this.loadingBar.nativeElement.style.top = '100%';
-        this.loadingBar.nativeElement.style.height = '30px';
-        if (!this.isLastItem) {
-            var factory = this._builder.build([
-                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["group"])([
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["animate"])('5s', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ top: 'calc(100% + 30px)' })),
-                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["animate"])('5s', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ height: '0px' }))
-                ])
-            ]);
-            this.player = factory.create(this.loadingBar.nativeElement, {});
-            this.player.play();
-            this.player.onDone(function () {
-                _this.setState('completed');
-            });
-        }
-        else {
-            setTimeout(function () {
-                _this.setState('completed');
-            }, 5000);
-        }
+        this.loadingBar.nativeElement.style.height = this.fullLineHeightPx;
+        var factory = this._builder.build([
+            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["group"])([
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["animate"])('1s', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ background: '#ff6600' })),
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["animate"])(this.warningTime, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ top: "calc(100% + " + this.fullLineHeightPx + ")" })),
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["animate"])(this.warningTime, Object(_angular_animations__WEBPACK_IMPORTED_MODULE_0__["style"])({ height: '0px' }))
+            ])
+        ]);
+        this.player = factory.create(this.loadingBar.nativeElement, {});
+        this.player.play();
+        this.player.onDone(function () {
+            _this.setState('completed');
+        });
     };
-    AgendaItemComponent.prototype.clearnCurrentAnimations = function () {
+    AgendaItemComponent.prototype.clearCurrentAnimations = function () {
         if (this.player) {
             this.player.destroy();
             this.player = undefined;
         }
     };
     __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('loadingBar', { static: true }),
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('loadingBar', { static: true }),
         __metadata("design:type", Object)
     ], AgendaItemComponent.prototype, "loadingBar", void 0);
     __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
         __metadata("design:type", Number)
     ], AgendaItemComponent.prototype, "duration", void 0);
     __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
-        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])(),
+        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"])
     ], AgendaItemComponent.prototype, "durationChanged", void 0);
     __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
         __metadata("design:type", Object),
         __metadata("design:paramtypes", [Object])
     ], AgendaItemComponent.prototype, "state", null);
     __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
         __metadata("design:type", Number)
     ], AgendaItemComponent.prototype, "itemNumber", void 0);
     __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
         __metadata("design:type", Boolean)
     ], AgendaItemComponent.prototype, "isLastItem", void 0);
     AgendaItemComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-agenda-item',
             template: __webpack_require__(/*! ./agenda-item.component.html */ "./src/app/agenda-item/agenda-item.component.html"),
             styles: [__webpack_require__(/*! ./agenda-item.component.css */ "./src/app/agenda-item/agenda-item.component.css")]
         }),
-        __metadata("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"],
-            _angular_animations__WEBPACK_IMPORTED_MODULE_1__["AnimationBuilder"]])
+        __metadata("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"],
+            _angular_animations__WEBPACK_IMPORTED_MODULE_0__["AnimationBuilder"]])
     ], AgendaItemComponent);
     return AgendaItemComponent;
 }());
@@ -6579,7 +6588,7 @@ module.exports = "\r\n.line {\r\n  height: 0px;\r\n  position: absolute;\r\n  to
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"p-2\">\r\n\t<span class=\"p-2\">Agenda</span>\r\n\r\n<div class=\"ml-6 mt-12 line transparent\" style=\"margin-left: 25px\"></div>\r\n\r\n<app-agenda-item [duration]=\"duration1\" (durationChanged)=\"duration1 = $event\" itemNumber=\"1\" [state]=\"state1\" ></app-agenda-item>\r\n<app-agenda-item [duration]=\"duration2\"  itemNumber=\"2\"  [state]=\"state2\" isLastItem=\"true\"></app-agenda-item>\r\n\r\n\r\n    <div class=\"text-center\">\r\n\r\n        <button class=\"border px-4 py-2 mt-2 bg-blue-light white\" (click)=\"start()\">Start</button>\r\n\r\n        <!-- <button class=\"border ml-2 p-2 mt-2 bg-blue-light white\" (click)=\"setState('nearlyCompleted')\">Nearly\r\n            completed</button>\r\n\r\n        <button class=\"border ml-2 p-2 mt-2 bg-blue-light white\" (click)=\"setState('started', duration / 2)\">Set 50%\r\n            done</button> -->\r\n        <button class=\"border ml-2 px-4 py-2 mt-2 bg-blue-light white\" (click)=\"reset()\">Reset</button>\r\n    </div>\r\n</div>\r\n<div class=\"border-l-4 border-blue-600 mx-20 mt-20 p-2 opacity-75\">\r\n    Last one minutes animation is done in last 5 seconds(for simulation purpose). <br/> You can change the duration to see how it behaves with different durations.\r\n</div>"
+module.exports = "<div class=\"p-2\">\r\n\t<span class=\"p-2\"><b>Agenda</b> v2.0(with most comments resolved)</span>\r\n\r\n<div class=\"ml-6 mt-12 line transparent\" style=\"margin-left: 25px\"></div>\r\n\r\n<app-agenda-item [duration]=\"duration1\" (durationChanged)=\"duration1 = $event\" itemNumber=\"1\" [state]=\"state1\" ></app-agenda-item>\r\n<app-agenda-item [duration]=\"duration2\"  itemNumber=\"2\"  [state]=\"state2\" isLastItem=\"true\"></app-agenda-item>\r\n\r\n\r\n    <div class=\"text-center\">\r\n\r\n        <button class=\"border px-4 py-2 mt-2 bg-blue-light white\" (click)=\"start()\">Start</button>\r\n\r\n        <!-- <button class=\"border ml-2 p-2 mt-2 bg-blue-light white\" (click)=\"setState('nearlyCompleted')\">Nearly\r\n            completed</button>\r\n\r\n        <button class=\"border ml-2 p-2 mt-2 bg-blue-light white\" (click)=\"setState('started', duration / 2)\">Set 50%\r\n            done</button> -->\r\n        <button class=\"border ml-2 px-4 py-2 mt-2 bg-blue-light white\" (click)=\"reset()\">Reset</button>\r\n    </div>\r\n</div>\r\n<div class=\"border-l-4 border-blue-600 mx-20 mt-20 p-2 opacity-75\">\r\n    Last one minutes animation is done in last 5 seconds(for simulation purpose). <br/> You can change the duration to see how it behaves with different durations.\r\n</div>"
 
 /***/ }),
 
