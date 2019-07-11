@@ -157,26 +157,19 @@ export class AgendaItemComponent {
     this.loadingBar.nativeElement.style.height = this.fullLineHeightPx;
 
 
-    if (!this.isLastItem) {
+    const factory = this._builder.build([
+      group([
+        animate('1s', style({ background: '#ff6600' })),
+        animate('5s', style({ top: `calc(100% + ${this.fullLineHeightPx})` })),
+        animate('5s', style({ height: '0px' }))
+      ])
+    ]);
+    this.player = factory.create(this.loadingBar.nativeElement, {});
+    this.player.play();
 
-      const factory = this._builder.build([
-        group([
-          animate('1s', style({background: '#ff6600'})),
-          animate('5s', style({ top: `calc(100% + ${this.fullLineHeightPx})` })),
-          animate('5s', style({ height: '0px' }))
-        ])
-      ]);
-      this.player = factory.create(this.loadingBar.nativeElement, {});
-      this.player.play();
-
-      this.player.onDone(() => {
-        this.setState('completed');
-      })
-    } else {
-      setTimeout(() => {
-        this.setState('completed');
-      }, 5000);
-    }
+    this.player.onDone(() => {
+      this.setState('completed');
+    })
 
   }
 
@@ -185,6 +178,5 @@ export class AgendaItemComponent {
       this.player.destroy();
       this.player = undefined;
     }
-
   }
 }
