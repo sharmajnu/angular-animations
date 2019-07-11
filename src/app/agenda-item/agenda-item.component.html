@@ -12,11 +12,15 @@
 	<div class="ml-4 mt-2 text-xl flex flex-col">
 		<span>Current state: <b>{{state}}</b></span>
 
-            <label class="block text-xs" for="duration">Duration in Milliseconds (Editable)</label>
-            <input id="duration" type="number"
-			class="border-b border-blue-200 focus:border-blue-700 text-base focus:text-xl" 
-			[(ngModel)]="duration" (ngModelChange)="durationChanged.emit($event)" />
-            <div *ngIf="state === 'nearlyCompleted'" class="text-xs pt-16 mt-6" >1 min remaining (indication)</div>
+		<label class="block text-xs" for="duration">Duration in Milliseconds (Editable)</label>
+		<div>
+			<input id="duration" type="number"
+				class="border-b border-blue-200 focus:border-blue-700 text-base focus:text-xl" [(ngModel)]="duration"
+				(ngModelChange)="durationChanged.emit($event)" />
+			<span *ngIf="duration && duration > 60000" class="text-xs">{{duration / 60000}} mins</span>
 
-        </div>
+		</div>
+		<div *ngIf="state === 'nearlyCompleted'" class="text-xs pt-16 mt-6">1 min remaining (indication)</div>
+
+	</div>
 </div>
