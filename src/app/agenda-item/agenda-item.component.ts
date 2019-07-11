@@ -69,6 +69,10 @@ export class AgendaItemComponent {
       this.loadingBar.nativeElement.style.height = '0px';
       this.loadingBar.nativeElement.style.top = '0%';
 
+      if (this.player) {
+        this.player.destroy();
+        this.player = undefined;
+      }
 
     }
 
