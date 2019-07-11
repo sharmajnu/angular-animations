@@ -1,19 +1,7 @@
-import { Component, ViewChild, Input, EventEmitter, Output } from '@angular/core';
-import { NgZone } from '@angular/core';
-import { AnimationBuilder, AnimationPlayer } from "@angular/animations";
+import { animate, AnimationBuilder, AnimationPlayer, group, sequence, state, style } from '@angular/animations';
+import { Component, EventEmitter, Input, NgZone, Output, ViewChild } from '@angular/core';
 
 
-
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition,
-  group,
-  sequence,
-  AnimationEvent
-} from '@angular/animations';
 
 @Component({
   selector: 'app-agenda-item',
@@ -79,11 +67,7 @@ export class AgendaItemComponent {
     if (value === 'not-started') {
       this.loadingBar.nativeElement.style.height = '0px';
       this.loadingBar.nativeElement.style.top = '0%';
-
-      if (this.player) {
-        this.player.destroy();
-        this.player = undefined;
-      }
+      this.clearCurrentAnimations();
 
     }
 
@@ -156,12 +140,11 @@ export class AgendaItemComponent {
     this.loadingBar.nativeElement.style.top = '100%';
     this.loadingBar.nativeElement.style.height = this.fullLineHeightPx;
 
-
     const factory = this._builder.build([
       group([
         animate('1s', style({ background: '#ff6600' })),
-        animate('5s', style({ top: `calc(100% + ${this.fullLineHeightPx})` })),
-        animate('5s', style({ height: '0px' }))
+        animate(this.warningTime, style({ top: `calc(100% + ${this.fullLineHeightPx})` })),
+        animate(this.warningTime, style({ height: '0px' }))
       ])
     ]);
     this.player = factory.create(this.loadingBar.nativeElement, {});
