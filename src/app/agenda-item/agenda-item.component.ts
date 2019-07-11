@@ -1,4 +1,4 @@
-import { animate, AnimationBuilder, AnimationPlayer, group, sequence, state, style } from '@angular/animations';
+import { animate, AnimationBuilder, AnimationPlayer, group, sequence, state, style, transition } from '@angular/animations';
 import { Component, EventEmitter, Input, NgZone, Output, ViewChild } from '@angular/core';
 
 
@@ -143,7 +143,10 @@ export class AgendaItemComponent {
     const factory = this._builder.build([
       group([
         animate('1s', style({ background: '#ff6600' })),
-        animate(this.warningTime, style({ top: `calc(100% + ${this.fullLineHeightPx})` })),
+        animate(this.warningTime, style({
+          transform: `translateY(${this.fullLineHeightPx})`
+        })),
+        // animate(this.warningTime, style({ top: `calc(100% + ${this.fullLineHeightPx})` })),
         animate(this.warningTime, style({ height: '0px' }))
       ])
     ]);
