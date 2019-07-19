@@ -23,4 +23,10 @@ input {
 
 .state-nc {
   background: #ff6600;
+  animation: colorChange 2s forwards;
+}
+
+@keyframes colorChange {
+  from {background: #78cbec}
+  to {background: #ff6600}
 }

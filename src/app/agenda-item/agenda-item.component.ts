@@ -73,20 +73,53 @@ export class AgendaItemComponent {
 
     if (value === 'started') {
       const remainingTime = this.duration;
-      this.runStartAnimation(remainingTime);
+      this.runSimpleStartAnimation(remainingTime);
       this.handler = setTimeout(() => {
         this.setState('nearlyCompleted');
         this.handler = undefined;
       }, remainingTime - this.warningTime)
     }
 
-    if (value === 'nearlyCompleted') {
-      this.runNearlyCompletedAnimation();
+    // if (value === 'nearlyCompleted') {
+    //   this.runSimpleNearlyCompletedAnimation();
+    // }
+
+    // if (value === 'completed') {
+    //   this.runCompletedAnimation();
+    // }
+  }
+
+  runSimpleStartAnimation(remainingTime?: number) {
+
+    if (remainingTime === undefined) {
+      remainingTime = this.duration;
     }
 
-    if (value === 'completed') {
-      this.runCompletedAnimation();
-    }
+    this.clearCurrentAnimations();
+
+    const topPercent = 100 - Math.round((remainingTime) * 100 / this.duration);
+    this.loadingBar.nativeElement.style.top = `${topPercent}%`;
+
+    this.loadingBar.nativeElement.style.height = this.fullLineHeightPx;
+    this.loadingBar.nativeElement.style.opacity = 0;
+
+
+    const pHeight = this.loadingBar.nativeElement.parentElement.scrollHeight;
+
+    // const slidingPercent = ((this.fullLineHeight - this.initialLineHeight) * 100 / pHeight);
+
+
+    const factory = this._builder.build([
+      sequence([
+        animate(2000, style({ opacity: 1 })),
+        animate(remainingTime -4000, style({ transform: `translateY(${pHeight}px)` })),
+        animate('2s', style({ opacity: 0 }))
+      ])
+    ]);
+    this.player = factory.create(this.loadingBar.nativeElement, {});
+    this.player.play();
+
+
   }
 
 
@@ -134,6 +167,25 @@ export class AgendaItemComponent {
     this.player.onDone(() => {
 
     });
+  }
+
+  runSimpleNearlyCompletedAnimation() {
+
+    this.clearCurrentAnimations();
+    this.loadingBar.nativeElement.style.opacity = 1;
+
+    const factory = this._builder.build([
+      group([
+        animate('1s', style({ background: '#ff6600' }))
+      ])
+    ]);
+    this.player = factory.create(this.loadingBar.nativeElement, {});
+    this.player.play();
+
+    setTimeout(() => {
+      this.setState('completed');
+    }, this.warningTime);
+
   }
 
 
