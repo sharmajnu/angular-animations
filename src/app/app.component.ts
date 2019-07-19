@@ -33,20 +33,27 @@ export class AppComponent {
   state1 = 'not-started';
   state2 = 'not-started';
 
-  duration1 = 15000;
-  duration2 = 15000;
+  duration1 = 7000;
+  duration2 = 30000;
 
 
+  fadeInTime = 800;
 
   timeout2;
   start() {
 
     this.reset();
-    this.state1 = 'started';
 
-    this.timeout2 = setTimeout(() => {
-      this.state2 = 'started';
-    }, this.duration1)
+    setTimeout(() => {
+
+      this.state1 = 'started';
+
+      this.timeout2 = setTimeout(() => {
+        this.state2 = 'started';
+      }, this.duration1);
+
+    }, 0);
+
 
   }
 
@@ -60,8 +67,8 @@ export class AppComponent {
 
   }
 
-durationChanged(v) {
-  
-}
+  durationChanged(v) {
+
+  }
 
 }
