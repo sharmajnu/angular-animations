@@ -9,10 +9,13 @@
  */
 export function calcTime(duration: number, totalPixelsToMove: number, lineHeight: number, remainingTime: number) {
 
-    if (duration - remainingTime <= 0) {
+    if (remainingTime < 0) {
         console.log('Animation is already completed');
+        return;
     }
     const timeToMoveOnePixel = duration / totalPixelsToMove;
+
+    console.log({timeToMoveOnePixel})
 
     const pixelsToExpand = lineHeight;
 
@@ -28,10 +31,39 @@ export function calcTime(duration: number, totalPixelsToMove: number, lineHeight
 
     const pixelsMovedInSpentTime = pixelsMovedInOneUnitTime * spentTime;
 
+    console.log({timeToMoveOnePixel, pixelsMovedInOneUnitTime, pixelsToSlide, pixelsToExpand, timeToExpand, timeToSlide});
+
     if (pixelsMovedInSpentTime > lineHeight) {
-        console.log(`Slide ${totalPixelsToMove - pixelsMovedInSpentTime} Pixels in ${remainingTime}`);
+        
+
+        const result = {
+            top: pixelsMovedInSpentTime - lineHeight,
+            pixelsToSlide: totalPixelsToMove - pixelsMovedInSpentTime,
+            timeToSlide: Math.round(remainingTime),
+            lineHeight: lineHeight,
+            timeToExpand: 0,
+            pixelsToExpand: 0
+        };
+
+        console.log(`Slide ${result.pixelsToSlide} Pixels in ${result.timeToSlide} ms`);
+
+        return result;
     } else {
-        console.log(`Expand ${pixelsToExpand - pixelsMovedInSpentTime} Pixels in ${timeToExpand - spentTime}`);
-        console.log(`Slide ${pixelsToSlide} Pixels in ${timeToSlide}`);
+        
+
+        const result =  {
+            top: 0,
+            pixelsToExpand: pixelsToExpand - pixelsMovedInSpentTime,
+            timeToExpand: Math.round(timeToExpand - spentTime),
+            lineHeight: pixelsMovedInSpentTime,
+            pixelsToSlide,
+            timeToSlide
+        };
+
+        console.log(`Expand ${result.pixelsToExpand} Pixels in ${result.timeToExpand} ms`);
+        console.log(`Slide ${result.pixelsToSlide} Pixels in ${result.timeToSlide} ms` );
+
+        return result;
     }
 }
+
