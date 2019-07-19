@@ -1,5 +1,6 @@
 import { animate, AnimationBuilder, AnimationPlayer, group, sequence, state, style, transition } from '@angular/animations';
 import { Component, EventEmitter, Input, NgZone, Output, ViewChild, ElementRef } from '@angular/core';
+import { calcTime } from './timer-calculator';
 
 
 
@@ -38,6 +39,9 @@ export class AgendaItemComponent {
 
   @Input()
   itemNumber: number;
+
+  @Input()
+  remaining: number;
 
   @Input()
   isLastItem: boolean;
@@ -94,31 +98,43 @@ export class AgendaItemComponent {
 
   runSimpleStartAnimation(remainingTime?: number) {
 
-    if (remainingTime === undefined) {
-      remainingTime = this.duration;
-    }
+    const pHeight = this.loadingBar.nativeElement.parentElement.scrollHeight;
+
+    this.remaining = !this.remaining ? this.duration : this.remaining;
+
+    const timer = calcTime(this.duration, pHeight, this.fullLineHeight, this.remaining);
 
     this.clearCurrentAnimations();
 
-    const topPercent = 100 - Math.round((remainingTime) * 100 / this.duration);
-    this.loadingBar.nativeElement.style.top = `${topPercent}%`;
+    this.loadingBar.nativeElement.style.top = `${timer.top}px`;
 
-    this.loadingBar.nativeElement.style.height = this.fullLineHeightPx;
-    this.loadingBar.nativeElement.style.opacity = 0;
+    const currentLineHeight = (timer.lineHeight === 0 ? this.initialLineHeight : timer.lineHeight);
 
+    const scaleY = this.fullLineHeight / currentLineHeight;
+    this.loadingBar.nativeElement.style.height = currentLineHeight + 'px';
 
-    const pHeight = this.loadingBar.nativeElement.parentElement.scrollHeight;
-
-    // const slidingPercent = ((this.fullLineHeight - this.initialLineHeight) * 100 / pHeight);
-
-
-    const factory = this._builder.build([
+    const factory = timer.top === 0 ? this._builder.build([
       sequence([
-        animate(+this.fadeInTime, style({ opacity: 1 })),
-        animate(remainingTime - this.fadeInTime, style({ transform: `translateY(${pHeight}px)` })),
-        animate(+this.fadeInTime, style({ opacity: 0 }))
+        animate(timer.timeToExpand, style({
+          transform: `scale(1,${scaleY})`,
+          'animation-fill-mode': 'forwards',
+          'transform-origin': 'top'
+        })
+        ),
+        animate(1, style({})),
+        style({ height: this.fullLineHeightPx, transform: `scale(1,1)` }),
+        animate(timer.timeToSlide, style({ transform: `translateY(${timer.pixelsToSlide}px)` }))
+      ])
+    ]) : 
+    
+    this._builder.build([
+      sequence([
+        style({ height: this.fullLineHeightPx, transform: `scale(1,1)` }),
+        animate(timer.timeToSlide, style({ transform: `translateY(${timer.pixelsToSlide}px)` }))
       ])
     ]);
+
+
     this.player = factory.create(this.loadingBar.nativeElement, {});
     this.player.play();
 
