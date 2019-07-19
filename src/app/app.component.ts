@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { NgZone } from '@angular/core';
 import { AnimationBuilder, AnimationPlayer } from "@angular/animations";
-
+import { calcTime} from './agenda-item/timer-calculator';
 
 
 import {
@@ -35,6 +35,12 @@ export class AppComponent {
 
   duration1 = 120000;
   duration2 = 300000;
+
+  remaining = 100000;
+
+  lineHeight = 20;
+
+  pixelsToMove = 100;
 
 
   fadeInTime = 600;
@@ -71,4 +77,21 @@ export class AppComponent {
 
   }
 
+  calculate() {
+    calcTime(+this.duration1, +this.pixelsToMove, this.lineHeight, this.remaining );
+  }
+
+  test1() {
+    this.duration1 = 100;
+    this.pixelsToMove = 100;
+    this.remaining = 100;
+    this.lineHeight = 20;
+  }
+
+  test2() {
+    this.duration1 = 50;
+    this.pixelsToMove = 20;
+    this.remaining = 40;
+    this.lineHeight = 10;
+  }
 }

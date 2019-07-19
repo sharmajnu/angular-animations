@@ -7,9 +7,14 @@ import { HelloComponent } from './hello.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AgendaItemComponent } from './agenda-item/agenda-item.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, BrowserAnimationsModule ],
+  imports:      [ 
+    BrowserModule, FormsModule, BrowserAnimationsModule,
+    FormsModule,
+    CommonModule
+   ],
   declarations: [ AppComponent, HelloComponent, AgendaItemComponent ],
   bootstrap:    [ AppComponent ]
 })

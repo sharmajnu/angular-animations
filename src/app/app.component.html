@@ -1,32 +1,58 @@
-<div class="p-2">
-    <span class="p-2"><b>Agenda</b> v3.2(With fade-in/out animations)</span>
+<div class="flex flex-row">
+    <div class="p-2 flex-grow">
+        <span class="p-2"><b>Agenda</b> v3.2(With fade-in/out animations)</span>
 
-    <div class="ml-6 mt-12 line transparent" style="margin-left: 25px"></div>
+        <div class="ml-6 mt-12 line transparent" style="margin-left: 25px"></div>
 
-    <app-agenda-item [duration]="duration1" (durationChanged)="duration1 = $event" itemNumber="1" [state]="state1"
-        [fadeInTime]="fadeInTime"></app-agenda-item>
-    <app-agenda-item [duration]="duration2" itemNumber="2" [state]="state2" isLastItem="true" [fadeInTime]="fadeInTime">
-    </app-agenda-item>
+        <app-agenda-item [duration]="duration1" (durationChanged)="duration1 = $event" itemNumber="1" [state]="state1"
+            [fadeInTime]="fadeInTime"></app-agenda-item>
+        <app-agenda-item [duration]="duration2" itemNumber="2" [state]="state2" isLastItem="true"
+            [fadeInTime]="fadeInTime">
+        </app-agenda-item>
 
-    <div class="mx-20 bg-gray-200 p-8 mt-4 text-center">
-        <label>Fade in/out time(in milliseconds):</label>
-        <input type="tel" class="border border-blue-200 focus:border-blue-600 ml-4 p-1" [(ngModel)]="fadeInTime" />
-    </div>
+        <div class="mx-20 bg-gray-200 p-8 mt-4 text-center">
+            <label>Fade in/out time(in milliseconds):</label>
+            <input type="tel" class="border border-blue-200 focus:border-blue-600 ml-4 p-1" [(ngModel)]="fadeInTime" />
+        </div>
 
-    <div class="text-center">
+        <div class="text-center">
 
-        <button class="border px-4 py-2 mt-2 bg-blue-light white" (click)="start()">Start</button>
+            <button class="border px-4 py-2 mt-2 bg-blue-light white" (click)="start()">Start</button>
 
-        <!-- <button class="border ml-2 p-2 mt-2 bg-blue-light white" (click)="setState('nearlyCompleted')">Nearly
+            <!-- <button class="border ml-2 p-2 mt-2 bg-blue-light white" (click)="setState('nearlyCompleted')">Nearly
             completed</button>
 
         <button class="border ml-2 p-2 mt-2 bg-blue-light white" (click)="setState('started', duration / 2)">Set 50%
             done</button> -->
-        <button class="border ml-2 px-4 py-2 mt-2 bg-blue-light white" (click)="reset()">Reset</button>
+            <button class="border ml-2 px-4 py-2 mt-2 bg-blue-light white" (click)="reset()">Reset</button>
+        </div>
+        <div class="border-l-4 border-blue-600 mx-20 mt-20 p-2 opacity-75">
+            Last one minutes animation is done in last 5 seconds(for simulation purpose). <br /> You can change the
+            duration to
+            see how it behaves with different durations.
+        </div>
     </div>
-</div>
+    <div class="p-4 pt-10 w-1/2 text-gray-500 h-screen" style="background: #2E2E2E">
+        <label>Duration</label>
+        <input [(ngModel)]="duration1" class="block text-gray-700 p-1 mt-2 my-4" />
 
-<div class="border-l-4 border-blue-600 mx-20 mt-20 p-2 opacity-75">
-    Last one minutes animation is done in last 5 seconds(for simulation purpose). <br /> You can change the duration to
-    see how it behaves with different durations.
+        <label>Remaining</label>
+        <input [(ngModel)]="remaining" class="block text-gray-700 p-1 mt-2 my-4" />
+
+        <label class="block">Total pixels to move</label>
+        <input [(ngModel)]="pixelsToMove" class="text-gray-700 p-1 mt-2 my-4" />Px
+
+        <label class="block">Line height</label>
+        <input [(ngModel)]="lineHeight" class="text-gray-700 p-1 mt-2 my-4" />Px
+
+        <div>
+            <button (click)="test1()" class="border px-2 py-1 mr-2">Test 1</button>
+            <button (click)="test2()" class="border px-2 py-1 mt-2">Test 2</button>
+        </div>
+
+        <button (click)="calculate()"
+            class="block mt-4 text-gray-100 hover:bg-orange-500 bg-orange-400 px-6 py-2 rounded ">Calculate animation
+            timings</button>
+    </div>
+
 </div>
