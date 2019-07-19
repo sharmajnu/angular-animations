@@ -33,11 +33,11 @@ export class AppComponent {
   state1 = 'not-started';
   state2 = 'not-started';
 
-  duration1 = 7000;
-  duration2 = 30000;
+  duration1 = 120000;
+  duration2 = 300000;
 
 
-  fadeInTime = 800;
+  fadeInTime = 600;
 
   timeout2;
   start() {
