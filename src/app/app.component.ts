@@ -33,7 +33,7 @@ export class AppComponent {
   state1 = 'not-started';
   state2 = 'not-started';
 
-  duration1 = 10000;
+  duration1 = 15000;
   duration2 = 15000;
 
 
