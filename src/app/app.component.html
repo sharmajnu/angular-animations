@@ -1,11 +1,17 @@
 <div class="p-2">
-	<span class="p-2"><b>Agenda</b> v2.0(with most comments resolved)</span>
+    <span class="p-2"><b>Agenda</b> v2.0(with most comments resolved)</span>
 
-<div class="ml-6 mt-12 line transparent" style="margin-left: 25px"></div>
+    <div class="ml-6 mt-12 line transparent" style="margin-left: 25px"></div>
 
-<app-agenda-item [duration]="duration1" (durationChanged)="duration1 = $event" itemNumber="1" [state]="state1" ></app-agenda-item>
-<app-agenda-item [duration]="duration2"  itemNumber="2"  [state]="state2" isLastItem="true"></app-agenda-item>
+    <app-agenda-item [duration]="duration1" (durationChanged)="duration1 = $event" itemNumber="1" [state]="state1"
+        [fadeInTime]="fadeInTime"></app-agenda-item>
+    <app-agenda-item [duration]="duration2" itemNumber="2" [state]="state2" isLastItem="true" [fadeInTime]="fadeInTime">
+    </app-agenda-item>
 
+    <div class="mx-16 bg-gray-200 p-8 mt-4 text-center">
+        <label>Fade in/out time(in milliseconds):</label>
+        <input type="tel" class="border border-blue-200 focus:border-blue-600 ml-4 p-1" [(ngModel)]="fadeInTime" />
+    </div>
 
     <div class="text-center">
 
@@ -19,6 +25,8 @@
         <button class="border ml-2 px-4 py-2 mt-2 bg-blue-light white" (click)="reset()">Reset</button>
     </div>
 </div>
+
 <div class="border-l-4 border-blue-600 mx-20 mt-20 p-2 opacity-75">
-    Last one minutes animation is done in last 5 seconds(for simulation purpose). <br/> You can change the duration to see how it behaves with different durations.
+    Last one minutes animation is done in last 5 seconds(for simulation purpose). <br /> You can change the duration to
+    see how it behaves with different durations.
 </div>

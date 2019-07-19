@@ -19,6 +19,9 @@ export class AgendaItemComponent {
   public loadingBar: ElementRef;
 
   @Input()
+  fadeInTime: number;
+
+  @Input()
   duration: number;
 
   @Output()
@@ -111,9 +114,9 @@ export class AgendaItemComponent {
 
     const factory = this._builder.build([
       sequence([
-        animate(2000, style({ opacity: 1 })),
-        animate(remainingTime -4000, style({ transform: `translateY(${pHeight}px)` })),
-        animate('2s', style({ opacity: 0 }))
+        animate(+this.fadeInTime, style({ opacity: 1 })),
+        animate(remainingTime - this.fadeInTime, style({ transform: `translateY(${pHeight}px)` })),
+        animate(+this.fadeInTime, style({ opacity: 0 }))
       ])
     ]);
     this.player = factory.create(this.loadingBar.nativeElement, {});
