@@ -1,5 +1,5 @@
 import { animate, AnimationBuilder, AnimationPlayer, group, sequence, state, style, transition } from '@angular/animations';
-import { Component, EventEmitter, Input, NgZone, Output, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Input, NgZone, Output, ViewChild, ElementRef } from '@angular/core';
 
 
 
@@ -16,7 +16,7 @@ export class AgendaItemComponent {
   public player: AnimationPlayer;
 
   @ViewChild('loadingBar', { static: true })
-  public loadingBar;
+  public loadingBar: ElementRef;
 
   @Input()
   duration: number;
@@ -82,6 +82,10 @@ export class AgendaItemComponent {
 
     if (value === 'nearlyCompleted') {
       this.runNearlyCompletedAnimation();
+    }
+
+    if (value === 'completed') {
+      this.runCompletedAnimation();
     }
   }
 
@@ -156,6 +160,16 @@ export class AgendaItemComponent {
     this.player.onDone(() => {
       this.setState('completed');
     })
+
+  }
+
+  runCompletedAnimation() {
+
+    const factory = this._builder.build([
+      animate('3s', style({ opacity: 0 }))
+    ]);
+    this.player = factory.create(this.loadingBar.nativeElement, {});
+    this.player.play();
 
   }
 
