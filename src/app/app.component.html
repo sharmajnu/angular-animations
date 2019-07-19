@@ -4,8 +4,10 @@
 
         <div class="ml-6 mt-12 line transparent" style="margin-left: 25px"></div>
 
-        <app-agenda-item [duration]="duration1" (durationChanged)="duration1 = $event" itemNumber="1" [state]="state1"
-            [fadeInTime]="fadeInTime"></app-agenda-item>
+        <app-agenda-item #item1 [duration]="duration1" (durationChanged)="duration1 = $event" itemNumber="1" [state]="state1"
+            [fadeInTime]="fadeInTime"
+            [remaining]="remaining"
+            ></app-agenda-item>
         <app-agenda-item [duration]="duration2" itemNumber="2" [state]="state2" isLastItem="true"
             [fadeInTime]="fadeInTime">
         </app-agenda-item>
@@ -47,7 +49,8 @@
 
         <div>
             <button (click)="test1()" class="border px-2 py-1 mr-2">Test 1</button>
-            <button (click)="test2()" class="border px-2 py-1 mt-2">Test 2</button>
+            <button (click)="test2()" class="border px-2 py-1 mr-2">Test 2</button>
+            <button (click)="test3()" class="border px-2 py-1 mr-2">Test 3</button>
         </div>
 
         <button (click)="calculate()"

@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, OnInit, ElementRef } from '@angular/core';
 import { NgZone } from '@angular/core';
 import { AnimationBuilder, AnimationPlayer } from "@angular/animations";
 import { calcTime} from './agenda-item/timer-calculator';
@@ -16,19 +16,26 @@ import {
 
   // ...
 } from '@angular/animations';
+import { AgendaItemComponent } from './agenda-item/agenda-item.component';
 
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  ngOnInit(): void {
+     this.pixelsToMove = (this.item1 as any).loadingBar.nativeElement.parentElement.scrollHeight;
+  }
 
   constructor(private ngZone: NgZone,
     private _builder: AnimationBuilder
   ) {
 
   }
+
+  @ViewChild('item1', {static: true})
+  public item1: ElementRef;
 
   state1 = 'not-started';
   state2 = 'not-started';
@@ -78,7 +85,9 @@ export class AppComponent {
   }
 
   calculate() {
-    calcTime(+this.duration1, +this.pixelsToMove, this.lineHeight, this.remaining );
+    const r  = calcTime(+this.duration1, +this.pixelsToMove, this.lineHeight, this.remaining );
+
+    console.log(r);
   }
 
   test1() {
@@ -93,5 +102,12 @@ export class AppComponent {
     this.pixelsToMove = 20;
     this.remaining = 40;
     this.lineHeight = 10;
+  }
+
+  test3() {
+    this.duration1 = 50;
+    this.pixelsToMove = 180;
+    this.remaining = 50;
+    this.lineHeight = 20;
   }
 }
